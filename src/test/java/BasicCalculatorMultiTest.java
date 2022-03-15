@@ -28,7 +28,7 @@ public class BasicCalculatorMultiTest {
     }
 
     //Probando la lógica con muchos más casos de prueba
-    @DisplayName("Testing several rest")
+    @DisplayName("Testing several multiplication")
     @ParameterizedTest(name = "{0} * {1} = {2}")
     @CsvSource({
             "3,    5,   15",
@@ -40,6 +40,4 @@ public class BasicCalculatorMultiTest {
         assertEquals(expectedResult, basicCalculator.mult(first, second),
                 () -> first + " * " + second + " should equal " + expectedResult);
     }
-
-
 }
