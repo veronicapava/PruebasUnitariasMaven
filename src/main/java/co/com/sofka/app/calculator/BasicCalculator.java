@@ -22,13 +22,13 @@ public class BasicCalculator {
     //Multiplicacion
 
     public Long mult(Long number1, Long number2) {
-        logger.info( "Multiplicando {} * {} , number1, number2");
+        logger.info("Multiplicando {} * {}", number1, number2);
         return  number1 * number2;
     }
 
     //Division
     public Long div(Long number1, Long number2) {
-        logger.info( "Dividiendo {} / {} , number1, number2");
+        logger.info("Dividiendo {} / {}", number1, number2);
         if(number2 != 0){
             return  number1 / number2;
         } else {
