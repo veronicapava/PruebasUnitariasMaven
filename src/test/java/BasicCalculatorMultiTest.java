@@ -36,7 +36,7 @@ public class BasicCalculatorMultiTest {
             "30,  30, 900",
             "26,  85, 2210"
     })
-    public void severalSums(Long first, Long second, Long expectedResult) {
+    public void severalMult(Long first, Long second, Long expectedResult) {
         assertEquals(expectedResult, basicCalculator.mult(first, second),
                 () -> first + " * " + second + " should equal " + expectedResult);
     }

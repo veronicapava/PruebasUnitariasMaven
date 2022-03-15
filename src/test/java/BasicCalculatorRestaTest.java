@@ -32,7 +32,7 @@ public class BasicCalculatorRestaTest {
             "100,  75, 25",
             "1001,  1, 1000"
     })
-    public void severalSums(Long first, Long second, Long expectedResult) {
+    public void severalRest(Long first, Long second, Long expectedResult) {
         assertEquals(expectedResult, basicCalculator.resta(first, second),
                 () -> first + " - " + second + " should equal " + expectedResult);
     }
