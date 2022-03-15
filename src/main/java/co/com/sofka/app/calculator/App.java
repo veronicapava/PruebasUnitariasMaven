@@ -23,8 +23,21 @@ public class App {
         Long number2 = Long.valueOf( textNumber2 );
 
         BasicCalculator calculator = new BasicCalculator();
-        Long result = calculator.sum( number1, number2 );
 
-        System.out.println( number1 + " + " + number2 + " = " + result );
+        //Suma
+        Long resultSum = calculator.sum( number1, number2 );
+        System.out.println( number1 + " + " + number2 + " = " + resultSum );
+
+        //Resta
+        Long resultRest = calculator.resta( number1, number2 );
+        System.out.println( number1 + " - " + number2 + " = " + resultRest );
+
+        //Multiplicacion
+        Long resultMul = calculator.mult( number1, number2 );
+        System.out.println( number1 + " * " + number2 + " = " + resultMul );
+
+        //Division
+        Long resultDiv = calculator.div( number1, number2 );
+        System.out.println( number1 + " / " + number2 + " = " + resultDiv );
     }
 }
