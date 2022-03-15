@@ -2,6 +2,10 @@ import co.com.sofka.app.calculator.BasicCalculator;
 import junit.framework.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BasicCalculatorRestaTest {
     private final BasicCalculator basicCalculator = new BasicCalculator();
@@ -18,5 +22,18 @@ public class BasicCalculatorRestaTest {
 
         // Assert
         Assert.assertEquals(expectedValue, result);
+    }
+    //Probando la lógica con muchos más casos de prueba
+    @DisplayName("Testing several rest")
+    @ParameterizedTest(name = "{0} - {1} = {2}")
+    @CsvSource({
+            "1,    1,   0",
+            "5,    2,   3",
+            "100,  75, 25",
+            "1001,  1, 1000"
+    })
+    public void severalSums(Long first, Long second, Long expectedResult) {
+        assertEquals(expectedResult, basicCalculator.resta(first, second),
+                () -> first + " - " + second + " should equal " + expectedResult);
     }
 }
