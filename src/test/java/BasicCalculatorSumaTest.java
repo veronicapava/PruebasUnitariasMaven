@@ -3,7 +3,7 @@ import junit.framework.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class BasicCalculatorTest {
+public class BasicCalculatorSumaTest {
     private final BasicCalculator basicCalculator = new BasicCalculator();
 
     @Test
